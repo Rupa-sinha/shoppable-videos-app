@@ -1,0 +1,23 @@
+scopes = "write_products,read_products,write_metaobjects,read_metaobjects,write_files,read_files,write_themes,read_themes"
+api_version = "2024-01"
+
+[dev]
+forward_url = "https://your-dev-url.ngrok.io/"
+
+[webhooks]
+api_version = "2024-01"
+
+[[webhooks.subscriptions]]
+topic = "app/uninstalled"
+
+[[webhooks.subscriptions]]
+topic = "products/delete"
+
+[[webhooks.subscriptions]]
+topic = "customers/data_request"
+
+[[webhooks.subscriptions]]
+topic = "customers/redact"
+
+[[webhooks.subscriptions]]
+topic = "shop/redact"
